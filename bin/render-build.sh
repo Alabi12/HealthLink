@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# exit on error
+# Exit on error
 set -o errexit
 
+# Install dependencies
 bundle install
-bundle exec rake assets:precompile
-bundle exec rake assets:clean
-bundle exec rake db:migrate
+
+# Run migrations and seed database (if needed)
+bundle exec rails db:migrate
+# bundle exec rails db:seed
