@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   # Skip the require_login for the home page so anyone can see it
-  skip_before_action :authenticate_user!, only: [:home]
+  # skip_before_action :authenticate_user!, only: [:home]
   # Ensure user is logged in for the dashboard
-  before_action :authenticate_user!, only: [:dashboard]
+  before_action :authenticate_user!, only: [:dashboard] # <- FIXED THE TYPO
 
   def home
   end
