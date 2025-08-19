@@ -1,0 +1,9 @@
+<div class="max-w-6xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6">Your Dashboard</h1>
+  <p class="text-lg">Hello, <%= current_user.email %>! You are logged in as a <strong><%= current_user.role || 'user' %></strong>.</p>
+
+  <div class="mt-8 p-6 bg-gray-100 rounded-lg">
+    <h2 class="text-2xl font-semibold mb-4">What's next?</h2>
+    <p>This is where your symptom logs, appointments, and prescriptions will appear.</p>
+  </div>
+</div>
